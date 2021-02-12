@@ -1,0 +1,355 @@
+
+/*Modullere Ayrıldı*/
+
+
+/*
+.hero{
+    height: 541px;
+    
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+
+    &__img{
+        position: absolute;
+        height: 541px;
+        width: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    
+    
+    &__text{
+        font-family: 'Muli';
+        margin-top: 140px;
+        margin-left: 80px;
+        @include max-tablet{
+            margin-top: 240px;
+            text-align: center;
+        }
+        @include max-phone{
+            margin-top: 200px;
+            text-align: center;
+        }
+        
+        &__head{
+
+            width: 478px;
+            height: 191px;
+            @include max-laptop{
+                width: 50%;
+                margin-top: 50px;
+                height: 120px;
+            }
+            @include max-tablet{
+               width: 90%;
+            }
+
+
+            &--title{
+                font-size: $big-font;
+                color:$grey-tones-100;
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                line-height: 84px;
+                font-weight: 600;
+                @include max-laptop{
+                    font-size: $large-font;
+                    line-height: 20px;
+                    
+                }
+            }
+            &--subtitle{
+                font-size: $extra-big-font;
+                color:$grey-tones-100;
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                line-height: 84px;
+                font-weight: 700;
+                @include max-laptop{
+                    font-size: $big-font;
+                }
+            }
+    
+        }
+
+        
+        &__content{
+            width: 478px;
+            @include max-laptop{
+                width: 50%;
+                
+            }
+
+            @include max-tablet{
+                width: 80%;
+                margin-left: 0px;
+                font-size: $small-font;
+             }
+            span{
+                line-height: 26px;
+                font-size: $small-font;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.44;
+                letter-spacing: normal;
+                color: $grey-tones-100;
+                text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+                @include max-laptop{
+                    font-size: $small-font;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    &__card{
+        margin-top: 120px;
+        padding: 19px 26px 25px 0px;
+        @include max-laptop{
+            display: none;
+        }
+
+        .row{
+            flex-wrap: nowrap;
+            
+        }
+
+        margin-right: $big-spacing;
+        height: 88px;
+        width: 260px;
+        border-radius: 10px;
+        box-shadow: inset 0 -4px 1px 0 rgba(142, 159, 173, 0.2);
+        background-color: rgba(255, 255, 255, 0.95);
+        &__right{
+            margin-top: -6px;
+            &--title{
+                font-size: $extra-mini-font;
+                margin: 0 0 2px;
+                font-family: 'GreycliffCF';
+                font-size: 12px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: -0.2px;
+                color: $grey-tones-600;
+            }
+    
+            &--count{
+                font-size: $medium-font;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+            }
+        }
+       
+        &__left{
+            height: 100%;
+            width:68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }    
+}
+
+.submenu{
+    margin-top: -50px;
+    padding: 0 30.5px;
+
+    .col-lg-4{
+        padding: 0 9.5px;
+    }
+
+    &__card{
+        margin-bottom: 21px;
+
+        &__container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $grey-tones-100;
+            height: 98px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.98);
+            box-shadow:0 4px 1px 0 rgba(142, 159, 173, 0.2);
+
+            &--text{
+                margin-left: 30px;
+                width: auto;
+                span{
+                    font-family: 'GreycliffCF';
+                    font-size: $default-font;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.38;
+                    letter-spacing: normal;
+                    color: #18274a;
+                }
+            }
+
+            &--img{
+                min-width: 85px;
+                height: 99px;
+                margin-right: -1px;
+                background-color: $primary-blue-200;
+                border-radius: 60% 10px 10px 60% / 70% 10px 10px 70%;
+                border: solid 1px $primary-blue-200;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+            
+                    &--2{
+                        width: 90px;
+                        height: 100px;
+                        display: flex;
+                        align-items: center;
+                        img{
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+            }
+        }
+    }
+}
+
+.duyurular{
+    margin: 0 $big-spacing;
+    background-color: $grey-tones-100;
+    padding: 0 27.5px 0 27.5px;
+    border-radius: 20px;
+    box-shadow: inset 0 -4px 1px 0 rgba(142, 159, 173, 0.2);
+    border: solid 1px $grey-tones-200;
+    margin-bottom: 60px;
+    .col-lg-4{
+        padding: 0 12.5px;    
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        
+
+
+        &__title{
+            margin-bottom: 35px;
+            span{
+                font-family: 'GreycliffCF';
+                font-size: 24px;
+                font-weight: 800;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: -0.36px;
+                color: #263170;
+                padding-left: 12.5px;
+            }
+        }
+        &__buttons{
+            align-self: center;
+            padding-right: 12.5px;
+            padding-top: 41px;
+            display: flex;
+            margin-bottom: $mini-spacing;
+
+            &--search{
+                margin-right: 10px;
+                width: 45px;
+                height: 45px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid 2px $grey-tones-200;
+                background-color: $grey-tones-100;
+            }
+            &--fullscreen{
+                height: 45px;
+                width: 120px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: solid 2px $grey-tones-200;
+                background-color: $grey-tones-100;
+
+                span{
+                    font-size: $mini-font;
+                    padding-left: 14px;
+                }
+                img{
+                    padding-right: 11px;
+                }
+            }
+        }
+    }
+
+    
+
+    &__card{        
+        margin-bottom: 25px;
+        &--notf{
+            position: absolute;
+            width: 60px;
+            height: 25px;
+            background-color: $secondary-pink-100;
+            right: 12.5px;
+            border-radius: 0 10px 0 10px;
+            text-align: center;
+            span{
+                font-family: 'IBMPlexSans';
+                font-size: $mini-font;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: -0.2px;
+                text-align: center;
+                color: #ffffff;
+                
+            }
+        }
+        &__container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $grey-tones-100;
+            height: 88px;
+            border-radius: 10px;
+            border: 1px solid $grey-tones-200;
+            &--text{
+                padding-left: 30px;
+            }
+
+            &--img{
+                padding-right: $medium-spacing;
+
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        &__container--warning{
+            border: 1px solid $secondary-pink-100;
+        }
+    }
+
+
+
+}
+*/

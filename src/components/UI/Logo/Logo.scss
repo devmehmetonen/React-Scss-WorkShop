@@ -1,0 +1,15 @@
+@import "../../../scss/main.scss";
+
+.NavigationLogo {
+    padding-left: $big-spacing!important;
+    @include max-tablet{
+        display: flex;
+        justify-content: center;
+        padding-left: $xs-spacing!important;
+    }
+    
+    &--img {
+        height: 40px;   
+    }
+}
+

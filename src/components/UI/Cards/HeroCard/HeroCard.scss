@@ -1,0 +1,53 @@
+@import "../../../../scss/main.scss";
+
+.Hero__card{
+    margin-top: 120px;
+    padding: 19px 26px 25px 0px;
+    @include max-laptop{
+        display: none;
+    }
+
+    .row{
+        flex-wrap: nowrap;
+        
+    }
+
+    margin-right: $big-spacing;
+    height: 88px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: inset 0 -4px 1px 0 rgba(142, 159, 173, 0.2);
+    background-color: rgba(255, 255, 255, 0.95);
+    &__right{
+        margin-top: -6px;
+        &--title{
+            font-size: $extra-mini-font;
+            margin: 0 0 2px;
+            font-family: 'GreycliffCF';
+            font-size: 12px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: -0.2px;
+            color: $grey-tones-600;
+        }
+
+        &--count{
+            font-size: $medium-font;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+    }
+   
+    &__left{
+        height: 100%;
+        width:68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}    

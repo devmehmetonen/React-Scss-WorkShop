@@ -1,0 +1,11 @@
+@import "../../scss/base/index";
+
+.Navigation {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: $nav-bg;
+    @include max-laptop{
+        height: auto;
+    }
+}

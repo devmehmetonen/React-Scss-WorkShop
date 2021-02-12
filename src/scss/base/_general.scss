@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+@font-face {
+    font-family: 'Muli';
+    src: url('../../assets/fonts/Muli/Muli-Bold.ttf');
+}
+  
+@font-face {
+    font-family: 'GreycliffCF';
+    src: url('../../assets/fonts/GreycliffCF/greycliff-cf-bold.ttf');
+}
+  
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url('../../assets/fonts/IBMPlexSans/IBMPlexSans-Medium.ttf');
+}
+
+body{
+    font-family: 'GreycliffCF';
+    background-color: #f4f5f7;
+}
+
+.row {
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.col-lg-4,
+.col-lg-8{
+    padding: 0;
+}
+
+.hide{
+    display: none;
+}

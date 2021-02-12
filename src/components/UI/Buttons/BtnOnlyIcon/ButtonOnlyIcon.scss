@@ -1,0 +1,22 @@
+@import '../../../../scss/main.scss';
+
+.ButtonOnlyIcon{
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px $grey-tones-200;
+    background-color: $grey-tones-100;
+    transition: border .3s;
+
+    &:hover{
+        border: 2px solid $primary-blue-100;
+    }
+    &:active{
+        border: solid 2px $primary-darkblue-100;
+        color: $primary-darkblue-100;
+    }
+}

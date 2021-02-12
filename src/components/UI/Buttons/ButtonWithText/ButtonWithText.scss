@@ -1,0 +1,30 @@
+@import '../../../../scss/base/index';
+
+.BtnWithText{
+    height: 45px;
+    width: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 2px $grey-tones-200;
+    background-color: $grey-tones-100;
+    transition: border .3s;
+    color: $primary-blue-200;
+
+    span{
+        font-size: $mini-font;
+        padding-left: 14px;
+    }
+    img{
+        padding-right: 11px;
+    }
+    &:hover{
+        border: 2px solid $primary-blue-100;
+        color: $primary-blue-100;
+    }
+    &:active{
+        border: solid 2px $primary-darkblue-100;
+        color: $primary-darkblue-100;
+    }
+}

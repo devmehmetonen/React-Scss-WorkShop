@@ -1,0 +1,9 @@
+@import "../../../scss/main.scss";
+
+.Heroimage{
+    position: absolute;
+    height: 541px;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}

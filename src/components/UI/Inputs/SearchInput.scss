@@ -1,0 +1,82 @@
+@import '../../../scss/base/index';
+
+.SearchInput {
+        display: flex;
+        justify-content: center;
+        @include max-laptop{
+            justify-content: flex-start;
+            padding-left: $big-spacing!important;
+        }
+        @include max-tablet{
+            display: flex;
+            justify-content: center;
+            padding-left: $xs-spacing!important;
+        }
+        &__content {
+            $this: &;
+            width: 440px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: $primary-blue-200;
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include max-desktop{
+                width: 300px;
+            }
+            @include max-tablet{
+                width: 80%;
+            }
+
+            @include max-laptop{
+                margin: 10px 0 20px;
+            }
+
+            &--img {
+                position: absolute;
+                left: 15px;
+            }
+
+            &--input {
+                width: 100%;
+                height: 50px;
+                padding-left: 47px;
+                border-radius: 10px;
+                border: none;
+                border: 2px solid $grey-tones-200;
+                @include max-desktop{
+                   font-size: $extra-mini-font;
+                }
+                @include max-tablet{
+                    font-size: $mini-font;
+                }
+                
+                &:focus {
+                    #{$this} & {
+                        border: 2px solid $primary-blue-200;
+                    }
+
+                    outline: none;
+
+                }
+            }
+
+            &--button {
+                width: 70px;
+                height: 50px;
+                position: absolute;
+                right: -1px;
+                background-color: $primary-blue-200;
+                border-radius: 0 10px 10px 0;
+                border: none;
+                box-shadow: inset 0 -3px 1px 0 rgba(28, 31, 37, 0.2);
+                color: $grey-tones-100;
+                font-weight: 600;
+                font-size: $mini-font;
+                @include max-desktop{
+                    width: 55px;
+                    font-size: $extra-mini-font;
+                 }
+            }
+        }
+    }
